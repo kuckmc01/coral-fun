@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[vlt:FullCoverage]"
+    jcr:primaryType="sling:OrderedFolder"
+    sling:resourceType="cq/gui/components/authoring/sidepanel"
+    id="SidePanel">
+    <header jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <toolbar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/admin/toolbar">
+                <items jcr:primaryType="nt:unstructured">
+                    <close
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="right"
+                        class="toggle-sidepanel header-action"
+                        icon="coral-Icon--more"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        title="Toggle Side Panel"/>
+                    <headertitle_assetfinder
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/text"
+                        class="sidepanel-header-title sidepanel-header-title-assetfinder"
+                        text="Search Assets"
+                        title="Search Assets"/>
+                    <headertitle_components
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/text"
+                        class="sidepanel-header-title sidepanel-header-title-components"
+                        text="Components"
+                        title="Components"/>
+                </items>
+            </toolbar>
+        </items>
+    </header>
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <edit-panel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="wcm/core/content/editor/jcr:content/sidepanels/edit"/>
+            <developer-panel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="wcm/core/content/editor/jcr:content/sidepanels/developer"/>
+            <empty-panel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="wcm/core/content/editor/jcr:content/sidepanels/empty"/>
+        </items>
+    </content>
+</jcr:root>

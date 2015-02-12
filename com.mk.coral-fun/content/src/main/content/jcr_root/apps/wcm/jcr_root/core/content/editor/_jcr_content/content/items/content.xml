@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[vlt:FullCoverage]"
+    jcr:primaryType="sling:OrderedFolder"
+    sling:resourceType="cq/gui/components/authoring/editorpanel"
+    default="{Boolean}true"
+    id="Content">
+    <header
+        jcr:primaryType="nt:unstructured"
+        class="editor-GlobalBar">
+        <items jcr:primaryType="nt:unstructured">
+            <headerbar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/headerbar"
+                class="header-main">
+                <items jcr:primaryType="nt:unstructured">
+                    <togglesidepanel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="toggle-sidepanel editor-GlobalBar-item js-editor-SidePanel-toggle"
+                        icon="icon-more"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        title="Toggle Side Panel"/>
+                    <emulator
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="editor-GlobalBar-item js-editor-EmulatorBar-toggle"
+                        disabled="true"
+                        icon="icon-deviceMobile"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        title="Emulator"/>
+                    <pageinfo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/hyperlink"
+                        align="left"
+                        align-from="right"
+                        class="editor-GlobalBar-item"
+                        href="#pageinfo-popover"
+                        icon="icon-properties"
+                        iconSize="S"
+                        id="pageinfo-trigger"
+                        minimal="{Boolean}true"
+                        point-from="bottom"
+                        title="Page Information - test"
+                        toggle="popover"
+                        within="#ContentWrapper"/>
+                    <pageinfopopover
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="pageinfo"
+                        id="pageinfo-popover"
+                        title="Page Information">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/popover"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <pagestatus
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/pagestatus"
+                                adminURL="/sites.html"
+                                id="pageinfo-data"
+                                propertyURL="/libs/wcm/core/content/sites/properties.html"
+                                propertyURLParam="item"/>
+                        </items>
+                    </pageinfopopover>
+                    <contexthub
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="editor-GlobalBar-item js-editor-ContextHubTrigger"
+                        disabled="true"
+                        icon="icon-demographic"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        title="ContextHub"/>
+                    <lockmode
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="cq-author-unlock-page editor-GlobalBar-item"
+                        hideText="{Boolean}true"
+                        icon="icon-lockOn"
+                        iconSize="S"
+                        id="unlock-page-trigger"
+                        minimal="{Boolean}true"
+                        title="Locked page"/>
+                    <undo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="cq-History-control editor-GlobalBar-item hide"
+                        hideText="{Boolean}true"
+                        history-control="undo"
+                        icon="icon-undo"
+                        minimal="{Boolean}true"
+                        text="Undo"
+                        title="Undo"/>
+                    <redo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="cq-History-control editor-GlobalBar-item hide"
+                        hideText="{Boolean}true"
+                        history-control="redo"
+                        icon="icon-redo"
+                        minimal="{Boolean}true"
+                        text="Redo"
+                        title="Redo"/>
+                    <annotationbadge
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/annotationsbadge"
+                        align="right"
+                        title="Annotate"/>
+                    <preview
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="right"
+                        class="editor-GlobalBar-item js-editor-LayerSwitcherTrigger editor-GlobalBar-previewTrigger"
+                        layer="Preview"
+                        minimal="{Boolean}true"
+                        text="Preview"
+                        title="Preview"/>
+                    <selectlayer
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/hyperlink"
+                        align="right"
+                        align-from="right"
+                        class="editor-GlobalBar-item editor-GlobalBar-layerSwitcher coral-MinimalButton"
+                        href="#selectlayer-popover"
+                        minimal="{Boolean}true"
+                        point-from="bottom"
+                        text="Edit"
+                        title="Select another mode"
+                        toggle="popover"
+                        within="#ContentWrapper"/>
+                    <selectlayerpopover
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        align="right"
+                        id="selectlayer-popover"
+                        title="Select another mode">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/popover"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <pageinfopopover
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                class="layers"/>
+                        </items>
+                    </selectlayerpopover>
+                    <publish
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/siteadmin/admin/actions/publish"
+                        id="publish"
+                        referencesURL="/libs/wcm/core/content/reference.json"
+                        replicationURL="/bin/replicate.json"
+                        wizardURL="/libs/wcm/core/content/sites/publishpagewizard.html"/>
+                    <unpublish
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/siteadmin/admin/actions/unpublish"
+                        id="unpublish"
+                        replicationURL="/bin/replicate.json"
+                        wizardURL="/libs/wcm/core/content/sites/unpublishpagewizard.html"/>
+                </items>
+            </headerbar>
+            <emulatorbar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/emulatorbar">
+                <items jcr:primaryType="nt:unstructured">
+                    <devicepopover
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        align="right"
+                        class="editor-EmulatorDevicePopover"
+                        id="js-editor-EmulatorDevicePopover"
+                        title="Select an emulation device">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/popover"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <publish
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/siteadmin/admin/actions/publish"
+                                id="publish"
+                                referencesURL="/libs/wcm/core/content/reference.json"
+                                replicationURL="/bin/replicate.json"
+                                wizardURL="/libs/wcm/core/content/sites/publishpagewizard.html"/>
+                            <list
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/emulatordevicelist"/>
+                        </items>
+                    </devicepopover>
+                    <opendevicepopover
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        align-from="right"
+                        class="editor-EmulatorDevicePopoverTrigger"
+                        icon="icon-deviceMobile"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        point-from="bottom"
+                        target="#js-editor-EmulatorDevicePopover"
+                        title="Select another mode"
+                        toggle="popover"
+                        within="#ContentWrapper"/>
+                    <restore
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="js-EmulatorDeviceTrigger"
+                        device="native"
+                        hideText="{Boolean}true"
+                        icon="icon-fullScreen"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        text="Native device"
+                        title="Native device"/>
+                    <rotate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/button"
+                        align="left"
+                        class="js-EmulatorDeviceRotate editor-EmulatorDeviceRotate"
+                        device="native"
+                        hideText="{Boolean}true"
+                        icon="icon-rotateRight"
+                        iconSize="S"
+                        minimal="{Boolean}true"
+                        text="Rotate device"
+                        title="Rotate device"/>
+                </items>
+            </emulatorbar>
+        </items>
+    </header>
+    <content
+        jcr:primaryType="nt:unstructured"
+        id="ContentScrollView">
+        <items jcr:primaryType="nt:unstructured">
+            <contentwrapper
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/contentwrapper"/>
+            <overlaywrapper
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/overlaywrapper"/>
+            <dnddefaultghost
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dnddefaultghost"/>
+        </items>
+    </content>
+</jcr:root>
