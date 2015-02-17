@@ -170,23 +170,16 @@
 %>
 <div <%= divAttrs.build() %>>
 
-    <div class="myflag-statusandactions">
-        <ul class="coral-Popover-content coral-List coral-List--minimal myflag-pagestatus">
-            <li class="coral-List-item info myflag-title">
-                <h1 class="coral-Heading coral-Heading--1"><%= xssAPI.filterHTML(targetPageProperties.get("jcr:title", "")) %></h1>
-            </li>
+    <div class="pageinfo-statusandactions myflag-container">
 
-            <li class="coral-List-item info myflag-status">
-                <i class="coral-Icon coral-Icon--fire coral-Icon--sizeXS" title="<%= xssAPI.filterHTML(i18n.get("Modified")) %>"></i>
-                <span>
-                <span><%= modifiedDate %></span> <%= xssAPI.filterHTML(i18n.get("by")) %> <span class="myflag-user"><%= modifiedBy %></span>
-                </span>
-            </li>
-        </ul>
 
-        <ul class="coral-Popover-content coral-List coral-List--minimal myflag-pageactions">
-            <li class="coral-List-item myflag-adminview myflag-pageaction" <%= adminViewActivatorAttrs.build() %>>
-                <i class="coral-Icon coral-Icon--properties coral-Icon--sizeS" title="<%= adminViewLabel %>"></i><%= adminViewLabel %>
+        <ul class="coral-Popover-content coral-List coral-List--minimal pageinfo-pageactions myflag-ul">
+
+            <li class="coral-List-item myflag-list">
+            	<a href="http://www.starwars.com" target="_blank">
+            		<span class="myflag-list-image"></span>
+                	<span class="myflag-list-text">May the force be with you.</span>
+            	</a>
             </li>
 
         </ul>

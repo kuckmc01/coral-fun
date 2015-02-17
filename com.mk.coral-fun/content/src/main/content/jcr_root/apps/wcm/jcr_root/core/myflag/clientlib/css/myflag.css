@@ -1,6 +1,4 @@
 .myflag-image-icon{
-	 //background-image: url("../img/icon.png");
-	 //background-size:42px 42px;
 	 width:36px;
 	 height:36px;
 }
@@ -8,8 +6,35 @@
 .myflag-container{
 	
 }
+.myflag-container ul, .myflag-container li {
+	-webkit-padding-start:0px;
+	padding:0px !important;
+}
 
-.myflag-stuff{
+.myflag-container a {
+	text-decoration:none;
+    margin-right: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.myflag-list{
+	list-style-type:none;
+}
+.myflag-list-image{
+	 background-image: url("../img/icon.png");
+     background-position: 50% 50%;
+	 background-size:36px 36px;
+     background-repeat: no-repeat;
+     height:40px;
+     width:40px;
+     display:inline-block
+
+}
+.myflag-list-text{
+    position:relative;
+    top:-14px;
 }
 
 .editor-GlobalBar{

@@ -15,6 +15,4 @@
 console.log("js outside");
 console.log(Granite.author);
 
-$(".myflag-button").on('click',function(){
-	alert("clicked");
-});
+

@@ -124,10 +124,12 @@ attrs.addOthers(cfg.getProperties(), "id", "rel", "class", "title", "hidden", "i
 %><a <%= attrs.build() %>><%
     if (icon != null  && icon.length() > 0) {
         %><i class="coral-Icon <%= cmp.getIconClass(icon) %> coral-Icon--size<%= iconSize %>"></i> <%
+    }else{
+    	if( imagePath != null){
+    		%><img src="<%=imagePath%>" class="<%=imageClass%>" /><%
+    	}
     }
-	if(icon == null && imagePath != null){
-		%><img src="<%=imagePath%>" class="<%=imageClass%>" /><%
-	}
+
     if (!cfg.get("hideText", false)) {
         %><%= outVar(xssAPI, i18n, cfg.get("text", "")) %><%
     }
