@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/coral-fun"/>
+    <filter root="/apps/wcm"/>
+    <filter root="/apps/cq"/>
+    <filter root="/apps/granite"/>
 </workspaceFilter>

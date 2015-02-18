@@ -67,6 +67,42 @@
                                 propertyURLParam="item"/>
                         </items>
                     </pageinfopopover>
+                   	<myflag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/hyperlink"
+                        align="left"
+                        align-from="right"
+                        class="editor-GlobalBar-item"
+                        href="#myflag-popover"
+                        icon=""
+                        iconSize="S"
+                        imagePath="/apps/wcm/jcr_root/core/myflag/clientlib/img/icon.png"
+                        imageClass="myflag-image-icon"
+                        id="myflag-trigger"
+                        minimal="{Boolean}true"
+                        point-from="bottom"
+                        title="My Flag - test"
+                        toggle="popover"
+                        within="#ContentWrapper"/>
+                    <myflagpopover
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="myflag"
+                        id="myflag-popover"
+                        title="My Flag Information">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/popover"/>
+                            <items jcr:primaryType="nt:unstructured">
+	                            <myflagstatus
+	                                jcr:primaryType="nt:unstructured"
+	                                sling:resourceType="cq/gui/components/authoring/myflag"
+	                                adminURL="/sites.html"
+	                                id="myflag-data"
+	                                propertyURL="/libs/wcm/core/content/sites/properties.html"
+	                                propertyURLParam="item"/>
+                            </items>
+                    </myflagpopover>
                     <contexthub
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/button"
