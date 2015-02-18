@@ -5,7 +5,7 @@ playing around with the coral2 ui in aem
 Coral2 UI
 Learn how to customize the coral 2 ui in aem
 
-*Create a button in the top nav (header nav)
+1. Create a button in the top nav (header nav)
 *Create a button in an edit bar
 *Create a new layer
 *Create a new selection category to asset browser
