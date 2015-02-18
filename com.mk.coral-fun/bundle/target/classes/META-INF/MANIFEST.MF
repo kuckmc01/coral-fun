@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1424197826197
+Bnd-LastModified: 1424200764751
 Build-Jdk: 1.8.0_25
 Built-By: sixdimensions
 Bundle-Description: Maven Multimodule project for Coral Fun - Reactor.
@@ -13,6 +13,4 @@ Import-Package: com.mk.com.mk.coral_fun;version="[1.0,2)",javax.servlet,
  org.apache.sling.api;version="[2.1,3)",org.apache.sling.api.request;ver
  sion="[2.1,3)",org.apache.sling.jcr.api;version="[2.1,3)",org.slf4j;ver
  sion="[1.5,2)"
-Service-Component: OSGI-INF/com.mk.com.mk.coral_fun.impl.filters.Logging
- Filter.xml,OSGI-INF/com.mk.com.mk.coral_fun.impl.HelloServiceImpl.xml
 Tool: Bnd-1.50.0
