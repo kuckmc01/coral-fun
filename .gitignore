@@ -36,3 +36,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+#
+com.mk.coral-fun/bundle/target
+com.mk.coral-fun/content/target
+aem-authoring-extension-toolbar-screenshot/
