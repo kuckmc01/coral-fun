@@ -1,5 +1,5 @@
 # coral-fun
-playing around with the coral ui in aem
+playing around with the coral2 ui in aem
 
 ## Objective
 Coral UI
